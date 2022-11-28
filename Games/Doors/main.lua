@@ -3,6 +3,8 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 local CF = CFrame.new
+local GameId = game.PlaceId
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local plr = game.Players.LocalPlayer
 local plrname = plr.Name
 local plrid = plr.UserId
@@ -77,7 +79,8 @@ local s3 = t3:NewSection("Visuals")
 local s4 = t4:NewSection("Misc")
 local s5 = t5:NewSection("Mods")
 
-s1:NewButton("User: " ..plrname.. " | " ..plrid)
+s1:NewButton("User : " ..plrname.. " | " ..plrid , "No Info")
+s1:NewButton("Game : " ..GameName.. " | " ..GameId , "No Info")
 
 local pcl = Instance.new("SpotLight")
 pcl.Brightness = 1
