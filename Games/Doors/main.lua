@@ -214,37 +214,6 @@ _G.FBEX = true
 _G.FBE = not _G.FBE
 end)
 
-s2:NewToggle("Inform Events","No Info", function(s)
-_G.IE = (s and true or false)
-    LatestRoom.Changed:Connect(function()
-        if _G.IE == true then
-            local n = ChaseStart.Value - LatestRoom.Value
-            if 0 < n and n < 4 then
-                Notification:Notify(
-    {Title = "Warning!", Description = "Event in " .. tostring(n) .. " rooms"},
-    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
-)
-            end
-        end
-    end)
-
-workspace.ChildAdded:Connect(function(inst)
-if inst.Name == "RushMoving" and _G.IE == true then
-Notification:Notify(
-    {Title = "Warning!", Description = "Rush has spawned, hide!"},
-    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
-)
-
-elseif inst.Name == "AmbushMoving" and _G.IE == true then
-Notification:Notify(
-    {Title = "Warning!", Description = "Ambush has spawned, hide!"},
-    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
-)
-
-end
-end)
-end)
-
 s2:NewToggle("Auto Avoid Rush/Ambush [BETA]","No Info", function(s)
 _G.Avoid = (s and true or false)
 workspace.ChildAdded:Connect(function(inst)
@@ -433,6 +402,37 @@ while _G.plrESP == true do wait()
         end
     end)
 end
+end)
+
+s4:NewToggle("Inform Events","No Info", function(s)
+_G.IE = (s and true or false)
+    LatestRoom.Changed:Connect(function()
+        if _G.IE == true then
+            local n = ChaseStart.Value - LatestRoom.Value
+            if 0 < n and n < 4 then
+                Notification:Notify(
+    {Title = "Warning!", Description = "Event in " .. tostring(n) .. " rooms"},
+    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
+)
+            end
+        end
+    end)
+
+workspace.ChildAdded:Connect(function(inst)
+if inst.Name == "RushMoving" and _G.IE == true then
+Notification:Notify(
+    {Title = "Warning!", Description = "Rush has spawned, hide!"},
+    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
+)
+
+elseif inst.Name == "AmbushMoving" and _G.IE == true then
+Notification:Notify(
+    {Title = "Warning!", Description = "Ambush has spawned, hide!"},
+    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
+)
+
+end
+end)
 end)
 
 s5:NewButton("Crucifix","No Info", function()
