@@ -75,7 +75,7 @@ local s1 = t1:NewSection("Welcome, " ..plrname)
 local s2 = t2:NewSection("Character")
 local s3 = t3:NewSection("Visuals")
 local s4 = t4:NewSection("Misc")
-local s5 = t4:NewSection("Mods")
+local s5 = t5:NewSection("Mods")
 
 s1:NewButton("User: " ..plrname.. " | " ..plrid)
 
@@ -285,10 +285,6 @@ s2:NewButton("No Jumpscares","No Info", function()
   	end    
 )
 
-s2:NewButton("Complete breaker box minigame","No Info", function()
-        game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
-  	end    
-)
 s2:NewButton("Skip level 50","No Info", function()
         local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
         game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
@@ -433,6 +429,10 @@ workspace.CurrentCamera.ChildAdded:Connect(function(child)
         child:Destroy()
     end
 end)
+end)
+
+s2:NewButton("Complete breaker box minigame","No Info", function()
+        game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
 end)
 
 s5:NewButton("Crucifix","No Info", function()
