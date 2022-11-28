@@ -431,7 +431,7 @@ workspace.CurrentCamera.ChildAdded:Connect(function(child)
 end)
 end)
 
-s2:NewButton("Complete breaker box minigame","No Info", function()
+s4:NewButton("Complete breaker box minigame","No Info", function()
         game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
 end)
 
