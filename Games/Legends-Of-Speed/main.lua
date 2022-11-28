@@ -6,6 +6,17 @@ local plr = game.Players.LocalPlayer
 local plrname = plr.Name
 local plrid = plr.UserId
 
+local colors = {
+    SchemeColor = Color3.fromRGB(98, 37, 209),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(22, 29, 50),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/UiLibrary/main/KavoMob"))()
+local Window = Library.CreateLib("Derp X | Legends Of Speed ⚡ | V1.00", colors)
+
 --// Toggle Button \\--
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -33,17 +44,6 @@ Button.MouseButton1Down:Connect(function()
 end)
 
 --//\\--
-
-local colors = {
-    SchemeColor = Color3.fromRGB(98, 37, 209),
-    Background = Color3.fromRGB(0, 0, 0),
-    Header = Color3.fromRGB(22, 29, 50),
-    TextColor = Color3.fromRGB(255,255,255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
-}
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/UiLibrary/main/KavoMob"))()
-local Window = Library.CreateLib("Derp X | Legends Of Speed ⚡ | V1.00", colors)
 
 local t1 = Window:NewTab("Welcome")
 local t2 = Window:NewTab("Auto Farm")
