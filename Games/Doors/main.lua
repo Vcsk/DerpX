@@ -214,52 +214,6 @@ _G.FBEX = true
 _G.FBE = not _G.FBE
 end)
 
-s2:NewToggle("Auto Avoid Rush/Ambush [BETA]","No Info", function(s)
-_G.Avoid = (s and true or false)
-workspace.ChildAdded:Connect(function(inst)
-if inst.Name == "RushMoving" and _G.Avoid == true then
-Notification:Notify(
-    {Title = "Warning!", Description = "Avoiding Rush. Please wait."},
-    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
-)
-
-local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-local con = game:GetService("RunService").Heartbeat:Connect(function()
-game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
-end)
-
-inst.Destroying:Wait()
-con:Disconnect()
-game.Players.LocalPlayer.Character:MoveTo(OldPos)
-
-elseif inst.Name == "AmbushMoving" and _G.Avoid == true then
-Notification:Notify(
-    {Title = "Warning!", Description = "Avoiding Ambush. Please wait."},
-    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
-)
-
-local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-local con = game:GetService("RunService").Heartbeat:Connect(function()
-game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
-end)
-
-inst.Destroying:Wait()
-con:Disconnect()
-game.Players.LocalPlayer.Character:MoveTo(OldPos)
-
-end
-end)
-end)
-
-s2:NewToggle("No Screech","No Info", function(s)
-_G.NS = (s and true or false)
-workspace.CurrentCamera.ChildAdded:Connect(function(child)
-    if child.Name == "Screech" and _G.NS == true then
-        child:Destroy()
-    end
-end)
-end)
-
 s2:NewToggle("Instant Interact","No Info", function(s)
 _G.II = (s and true or false)
 game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt)
@@ -432,6 +386,52 @@ Notification:Notify(
 )
 
 end
+end)
+end)
+
+s4:NewToggle("Auto Avoid Rush/Ambush [BETA]","No Info", function(s)
+_G.Avoid = (s and true or false)
+workspace.ChildAdded:Connect(function(inst)
+if inst.Name == "RushMoving" and _G.Avoid == true then
+Notification:Notify(
+    {Title = "Warning!", Description = "Avoiding Rush. Please wait."},
+    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
+)
+
+local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local con = game:GetService("RunService").Heartbeat:Connect(function()
+game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
+end)
+
+inst.Destroying:Wait()
+con:Disconnect()
+game.Players.LocalPlayer.Character:MoveTo(OldPos)
+
+elseif inst.Name == "AmbushMoving" and _G.Avoid == true then
+Notification:Notify(
+    {Title = "Warning!", Description = "Avoiding Ambush. Please wait."},
+    {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 5, Type = "default"}
+)
+
+local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local con = game:GetService("RunService").Heartbeat:Connect(function()
+game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0))
+end)
+
+inst.Destroying:Wait()
+con:Disconnect()
+game.Players.LocalPlayer.Character:MoveTo(OldPos)
+
+end
+end)
+end)
+
+s4:NewToggle("No Screech","No Info", function(s)
+_G.NS = (s and true or false)
+workspace.CurrentCamera.ChildAdded:Connect(function(child)
+    if child.Name == "Screech" and _G.NS == true then
+        child:Destroy()
+    end
 end)
 end)
 
