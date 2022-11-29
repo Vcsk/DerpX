@@ -12,9 +12,9 @@ local plrid = plr.UserId
 local colors = {
     SchemeColor = Color3.fromRGB(98, 37, 209),
     Background = Color3.fromRGB(0, 0, 0),
-    Header = Color3.fromRGB(22, 29, 50),
+    Header = Color3.fromRGB(35, 35, 50),
     TextColor = Color3.fromRGB(255,255,255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
+    ElementColor = Color3.fromRGB(35, 35, 50)
 }
 
 print("Loading...")
