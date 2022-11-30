@@ -61,6 +61,9 @@ local s5 = t5:NewSection("Mods")
 
 s1:NewButton("User : " ..plrname.. " | " ..plrid , "No Info")
 s1:NewButton("Game : " ..GameName.. " | " ..GameId , "No Info")
+s1:NewKeybind("Toggle Keybind", "Toggle", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 
 local pcl = Instance.new("SpotLight")
 pcl.Brightness = 1
