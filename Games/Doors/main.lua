@@ -1,7 +1,3 @@
---// Toggle Button \\--
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/DerpX/main/Others/ToggleButton", true))()
-wait()
-
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
@@ -43,6 +39,10 @@ Notification:Notify(
     {Title = "Welcome", Description = (plrname)},
     {OutlineColor = Color3.fromRGB(98, 37, 209),Time = 3, Type = "default"}
 )
+
+--// Toggle Button \\--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/DerpX/main/Others/ToggleButton", true))()
+wait()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/UiLibrary/main/KavoMob"))()
 local Window = Library.CreateLib("Derp X | DOORS 👁️ | V1.00", colors)
