@@ -1,3 +1,7 @@
+--// Toggle Button \\--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/DerpX/main/Others/ToggleButton", true))()
+wait()
+
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
@@ -42,30 +46,6 @@ Notification:Notify(
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/UiLibrary/main/KavoMob"))()
 local Window = Library.CreateLib("Derp X | DOORS 👁️ | V1.00", colors)
-
-local ScreenGui = Instance.new("ScreenGui")
-local Button = Instance.new("TextButton")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Button.Name = "Button"
-Button.Parent = ScreenGui
-Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Button.BackgroundTransparency = 0.700
-Button.Position = UDim2.new(0, 0, 0.469249964, 0)
-Button.Size = UDim2.new(0.131393284, 0, 0.082329005, 0)
-Button.Font = Enum.Font.Garamond
-Button.Text = "Toggle"
-Button.TextColor3 = Color3.fromRGB(40, 40, 40)
-Button.TextSize = 30.000
-Button.TextWrapped = true
-Button.Draggable = true
-Button.Selectable = true
-Button.Active = true
-Button.MouseButton1Down:Connect(function()
-	Library:ToggleUI()
-end)
 
 local t1 = Window:NewTab("Welcome", true)
 local t2 = Window:NewTab("Main")
