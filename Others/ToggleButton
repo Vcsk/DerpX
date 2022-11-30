@@ -1,0 +1,25 @@
+--// Toggle Button By Vcsk0 \\--
+
+local Toggle = Instance.new("ScreenGui")
+local Button = Instance.new("TextButton")
+
+Toggle.Parent = game.CoreGui
+Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Button.Name = "Button"
+Button.Parent = Toggle
+Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button.BackgroundTransparency = 0.700
+Button.Position = UDim2.new(0, 0, 0.469249964, 0)
+Button.Size = UDim2.new(0.131393284, 0, 0.082329005, 0)
+Button.Font = Enum.Font.Garamond
+Button.Text = "Toggle"
+Button.TextColor3 = Color3.fromRGB(40, 40, 40)
+Button.TextSize = 30.000
+Button.TextWrapped = true
+Button.Draggable = true
+Button.Selectable = true
+Button.Active = true
+Button.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F" ,false ,game)
+end)
