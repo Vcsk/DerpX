@@ -53,7 +53,7 @@ Title.TextSize = 14.000
 Title.TextWrapped = true
 
 local function RUCZDS_fake_script() 
-	local script = Instance.new('LocalScript', EnterPassword)
+	local script = Instance.new('LocalScript', CheckKey)
 
 	local s = script.Parent
 	
