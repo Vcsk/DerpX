@@ -58,19 +58,19 @@ local function RUCZDS_fake_script()
 	local s = script.Parent
 	
 	s.MouseButton1Click:Connect(function()
-		if s.Parent.Password.Text == "vcsk0" then
-			print("valid password!")
+		if s.Parent.Key.Text == "gIwGxv5kAlTejsZ" then
+			print("valid Key!")
 			s.Parent.Parent.main.Visible = false
             game:GetService("StarterGui"):SetCore("SendNotification",{
-				Title = "valid Password!",
+				Title = "valid Key!",
 				Text = ".",
 				Icon = "rbxassetid://8932511170"})
 			Duration = 5;
 		else
 			print("invalid password!")
 			game:GetService("StarterGui"):SetCore("SendNotification",{
-				Title = "Invalid Password!",
-				Text = "Subcribe Vcsk0 for Password",
+				Title = "Invalid Key!",
+				Text = "Subcribe Vcsk0 for Key",
 				Icon = "rbxassetid://8932511170"})
 			Duration = 5;
 		end
