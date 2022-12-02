@@ -26,4 +26,8 @@ end)
 
 local function rgb_script() 
 local script = Instance.new('LocalScript', Button)
+
+
+
 end
+coroutine.wrap(rgb_script)()
