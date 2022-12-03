@@ -1,7 +1,7 @@
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
-if game.PlaceId == 1335695570 then
+if game.PlaceId == 3956818381 then
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/DerpX/main/Games/Ninja-Legends/main.lua", true))()
 Notification:Notify(
