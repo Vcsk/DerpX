@@ -23,7 +23,7 @@ local s3 = win:Tab("Misc")
 s1:Label("Welcome, " ..plrname)
 s1:Label("User : " ..plrname.. " | " ..plrid)
 s1:Label("Game : " ..GameName.. " | " ..GameId)
-s1:Label("Toggle Keybind [F]")
+s1:Label("Toggle Keybind [ F ]")
 
 s2:Label("Auto Farm")
 
